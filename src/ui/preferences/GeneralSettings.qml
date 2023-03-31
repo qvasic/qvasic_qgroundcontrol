@@ -301,7 +301,7 @@ Rectangle {
                                 visible:    _videoSettings.visible
 
                                 QGCLabel {
-                                    text:               qsTr("Video Settings")
+                                    text:               qsTr("Video Settings vasyl wus khere")
                                     Layout.columnSpan:  2
                                     Layout.alignment:   Qt.AlignHCenter
                                 }
@@ -340,6 +340,52 @@ Rectangle {
                                     fact:                   _videoSettings.rtspUrl
                                     visible:                rtspUrlLabel.visible
                                 }
+
+
+
+                                QGCLabel {
+                                    id:         rtspUrlLabel1
+                                    text:       qsTr("RTSP URL 1")
+                                    visible:    !_videoAutoStreamConfig && _isRTSP && _videoSettings.rtspUrl.visible
+                                }
+                                FactTextField {
+                                    Layout.preferredWidth:  _comboFieldWidth
+                                    fact:                   _videoSettings.rtspUrl1
+                                    visible:                rtspUrlLabel.visible
+                                }
+                                QGCLabel {
+                                    id:         rtspUrlLabel2
+                                    text:       qsTr("RTSP URL 2")
+                                    visible:    !_videoAutoStreamConfig && _isRTSP && _videoSettings.rtspUrl.visible
+                                }
+                                FactTextField {
+                                    Layout.preferredWidth:  _comboFieldWidth
+                                    fact:                   _videoSettings.rtspUrl2
+                                    visible:                rtspUrlLabel.visible
+                                }
+                                QGCLabel {
+                                    id:         rtspUrlLabel3
+                                    text:       qsTr("RTSP URL 3")
+                                    visible:    !_videoAutoStreamConfig && _isRTSP && _videoSettings.rtspUrl.visible
+                                }
+                                FactTextField {
+                                    Layout.preferredWidth:  _comboFieldWidth
+                                    fact:                   _videoSettings.rtspUrl3
+                                    visible:                rtspUrlLabel.visible
+                                }
+                                QGCLabel {
+                                    id:         rtspUrlLabel4
+                                    text:       qsTr("RTSP URL 4")
+                                    visible:    !_videoAutoStreamConfig && _isRTSP && _videoSettings.rtspUrl.visible
+                                }
+                                FactTextField {
+                                    Layout.preferredWidth:  _comboFieldWidth
+                                    fact:                   _videoSettings.rtspUrl4
+                                    visible:                rtspUrlLabel.visible
+                                }
+
+
+
 
                                 QGCLabel {
                                     id:         tcpUrlLabel

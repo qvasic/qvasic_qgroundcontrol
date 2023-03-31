@@ -499,6 +499,9 @@ VideoManager::_updateUVC()
 void
 VideoManager::_videoSourceChanged()
 {
+    qInfo() << "VideoManager::_videoSourceChanged yes, and this one too";
+
+
     _updateUVC();
     _updateSettings(0);
     emit hasVideoChanged();

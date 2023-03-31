@@ -119,6 +119,11 @@ DECLARE_SETTINGSFACT(VideoSettings, streamEnabled)
 DECLARE_SETTINGSFACT(VideoSettings, disableWhenDisarmed)
 DECLARE_SETTINGSFACT(VideoSettings, lowLatencyMode)
 
+DECLARE_SETTINGSFACT(VideoSettings, rtspUrl1)
+DECLARE_SETTINGSFACT(VideoSettings, rtspUrl2)
+DECLARE_SETTINGSFACT(VideoSettings, rtspUrl3)
+DECLARE_SETTINGSFACT(VideoSettings, rtspUrl4)
+
 DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, videoSource)
 {
     if (!_videoSourceFact) {
@@ -221,5 +226,32 @@ bool VideoSettings::streamConfigured(void)
 
 void VideoSettings::_configChanged(QVariant)
 {
+    qInfo() << "VideoSettings::_configChanged yep, here we go";
     emit streamConfiguredChanged(streamConfigured());
+}
+
+void VideoSettings::change_rtsp_url_idx             (int i)
+{
+    qInfo() << "change_rtsp_url_idx " << i;
+    switch(i)
+    {
+    case 1:
+        rtspUrl()->setRawValue(rtspUrl1()->rawValue());
+        break;
+
+    case 2:
+        rtspUrl()->setRawValue(rtspUrl2()->rawValue());
+        break;
+
+    case 3:
+        rtspUrl()->setRawValue(rtspUrl3()->rawValue());
+        break;
+
+    case 4:
+        rtspUrl()->setRawValue(rtspUrl4()->rawValue());
+        break;
+
+    default:
+        break;
+    }
 }

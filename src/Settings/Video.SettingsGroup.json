@@ -25,6 +25,42 @@
     "type":             "string",
     "default":     ""
 },
+
+
+
+{
+    "name":             "rtspUrl1",
+    "shortDesc": "Video RTSP Url 1",
+    "longDesc":  "RTSP url 1 address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live",
+    "type":             "string",
+    "default":     ""
+},
+{
+    "name":             "rtspUrl2",
+    "shortDesc": "Video RTSP Url 2",
+    "longDesc":  "RTSP url 2 address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live",
+    "type":             "string",
+    "default":     ""
+},
+{
+    "name":             "rtspUrl3",
+    "shortDesc": "Video RTSP Url 3",
+    "longDesc":  "RTSP url 3 address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live",
+    "type":             "string",
+    "default":     ""
+},
+{
+    "name":             "rtspUrl4",
+    "shortDesc": "Video RTSP Url 4",
+    "longDesc":  "RTSP url 4 address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live",
+    "type":             "string",
+    "default":     ""
+},
+
+
+
+
+
 {
     "name":             "tcpUrl",
     "shortDesc": "Video TCP Url",

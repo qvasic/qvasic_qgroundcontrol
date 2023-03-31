@@ -194,7 +194,7 @@ ApplicationWindow {
     property bool _forceClose: false
 
     function finishCloseProcess() {
-        _forceClose = true
+        _forceClose = true                  
         // For some reason on the Qml side Qt doesn't automatically disconnect a signal when an object is destroyed.
         // So we have to do it ourselves otherwise the signal flows through on app shutdown to an object which no longer exists.
         firstRunPromptManager.clearNextPromptSignal()
@@ -265,6 +265,20 @@ ApplicationWindow {
         id:         toolbar
         height:     ScreenTools.toolbarHeight
         visible:    !QGroundControl.videoManager.fullScreen
+
+        focus: true
+
+        Keys.onReleased: {
+            if (event.key === Qt.Key_F5) {
+                QGroundControl.settingsManager.videoSettings.change_rtsp_url_idx(1);
+            } else if (event.key === Qt.Key_F6 ) {
+                QGroundControl.settingsManager.videoSettings.change_rtsp_url_idx(2);
+            } else if (event.key === Qt.Key_F7 ) {
+                QGroundControl.settingsManager.videoSettings.change_rtsp_url_idx(3);
+            } else if (event.key === Qt.Key_F8 ) {
+                QGroundControl.settingsManager.videoSettings.change_rtsp_url_idx(4);
+            }
+        }
     }
 
     footer: LogReplayStatusBar {

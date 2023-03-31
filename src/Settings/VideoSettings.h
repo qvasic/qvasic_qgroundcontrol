@@ -24,6 +24,12 @@ public:
     DEFINE_SETTINGFACT(udpPort)
     DEFINE_SETTINGFACT(tcpUrl)
     DEFINE_SETTINGFACT(rtspUrl)
+
+    DEFINE_SETTINGFACT(rtspUrl1)
+    DEFINE_SETTINGFACT(rtspUrl2)
+    DEFINE_SETTINGFACT(rtspUrl3)
+    DEFINE_SETTINGFACT(rtspUrl4)
+
     DEFINE_SETTINGFACT(aspectRatio)
     DEFINE_SETTINGFACT(videoFit)
     DEFINE_SETTINGFACT(gridLines)
@@ -79,6 +85,9 @@ signals:
 
 private slots:
     void _configChanged             (QVariant value);
+
+public:
+    Q_INVOKABLE void change_rtsp_url_idx             (int value);
 
 private:
     void _setDefaults               ();
